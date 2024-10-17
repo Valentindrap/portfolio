@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Valentindrap/portfolio/issues"
   },
-  "homepage": "https://github.com/Valentindrap/portfolio#readme",
+  "homepage": "https://github.com/Valentindrap/portfolio",
   "dependencies": {
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
