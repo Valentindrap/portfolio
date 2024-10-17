@@ -1,5 +1,9 @@
-$red : yellow;
+// page
+@forward 'layout/index';
 
-body{
-    background-color: $red;
-}
+
+// nav
+@forward 'layout/nav';
+
+
+

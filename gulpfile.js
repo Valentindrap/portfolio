@@ -1,6 +1,8 @@
 const { src, watch,  dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'))
 
+
+
 function css(){
     return src('src/scss/app.scss')
     
@@ -9,7 +11,7 @@ function css(){
 }
 
 function ver(){
-    watch('src/scss/app.scss', css)
+    watch('src/scss/**/*.scss', css)
 }
 
 exports.css = css
