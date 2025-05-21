@@ -4,70 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LoobStudio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="/img/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
 <div id="particles-js"></div>
 
+<header class="navbar">
+  <div class="container">
+    <a href="#" class="logo">Loob<span>Studio</span></a>
+    <nav>
+      <a href="#planes" class="nav-link">Planes</a>
+      <a href="#proyectos" class="nav-link">Proyectos</a>
+      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+    </nav>
+  </div>
+</header>
+
 <div class="intro">
-  <h1 class="logo">Loob<span>Studio</span></h1>
-  <p class="slogan">Welcome to your next level website ✨</p>
+  <div class="intro-content">
+    <h1 class="logo animate__animated animate__fadeInDown">Transformamos tus ideas en <span class="typing"></span></h1>
+    <p class="slogan animate__animated animate__fadeIn animate__delay-1s">Bienvenido a la experiencia digital del futuro ✨</p>
+    <a href="#planes" class="cta-btn animate__animated animate__fadeInUp animate__delay-1s">Explora nuestros servicios</a>
+  </div>
+  <div class="scroll-down animate__animated animate__fadeIn animate__delay-2s">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 
-<section class="planes" data-aos="fade-up">
-  <h2>🚀 Nuestros Planes</h2>
-  <div class="plan">
-    <h3>Plan Landing Page</h3>
-    <p>✔️ Página de destino (1 página)</p>
-    <p>✔️ Formulario de contacto</p>
-    <p>✔️ Botones de redes o WhatsApp</p>
-    <p>✔️ Personalizado para tu negocio</p>
+<section id="planes" class="planes" data-aos="fade-up">
+  <div class="section-header">
+    <h2><span class="highlight">🚀</span> Nuestros Planes</h2>
+    <p class="section-subtitle">Soluciones a medida para cada necesidad</p>
   </div>
-  <div class="plan">
-    <h3>Plan Página Web Completa</h3>
-    <p>✔️ Hasta 5 páginas</p>
-    <p>✔️ Formulario de contacto</p>
-    <p>✔️ Botones de redes o WhatsApp</p>
-    <p>✔️ Página "Acerca de nosotros"</p>
-    <p>✔️ Mantenimiento incluido</p>
+  
+  <div class="plans-container">
+    <div class="plan" data-aos="flip-left" data-aos-delay="100">
+      <div class="plan-header">
+        <h3>Plan Landing Page</h3>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas fa-check-circle"></i> Página de destino (1 página)</li>
+        <li><i class="fas fa-check-circle"></i> Formulario de contacto</li>
+        <li><i class="fas fa-check-circle"></i> Botones de redes o WhatsApp</li>
+        <li><i class="fas fa-check-circle"></i> Personalizado para tu negocio</li>
+        <li><i class="fas fa-check-circle"></i> Optimización SEO básica</li>
+      </ul>
+    </div>
+    
+    <div class="plan featured" data-aos="flip-left" data-aos-delay="300">
+      <div class="popular-badge">POPULAR</div>
+      <div class="plan-header">
+        <h3>Plan Web Completa</h3>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas fa-check-circle"></i> Hasta 5 páginas</li>
+        <li><i class="fas fa-check-circle"></i> Formulario de contacto avanzado</li>
+        <li><i class="fas fa-check-circle"></i> Integración con redes sociales</li>
+        <li><i class="fas fa-check-circle"></i> Página "Acerca de nosotros"</li>
+        <li><i class="fas fa-check-circle"></i> 1 mes de mantenimiento incluido</li>
+        <li><i class="fas fa-check-circle"></i> Optimización SEO completa</li>
+      </ul>
+    </div>
+    
+    <div class="plan" data-aos="flip-left" data-aos-delay="500">
+      <div class="plan-header">
+        <h3>Plan Personalizado</h3>
+      </div>
+      <ul class="plan-features">
+        <li><i class="fas"></i> Configuracion en tecnologias como:</li>
+        <li><i class="fas fa-check-circle"></i> Shopify</li>
+        <li><i class="fas fa-check-circle"></i> Tienda Nube</li>
+        <li><i class="fas fa-check-circle"></i> WooCommerce</li>
+        <li><i class="fas fa-check-circle"></i> Wix eCommerce</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="proyectos" data-aos="fade-up">
-    <h2>🎨 Nuestros Proyectos</h2>
-    <div class="proyecto-card">
-      <a href="https://copatal.onrender.com/" target="_blank">
-        <img src="/img/Copatal.png" alt="Copatal - Congreso Patagónico de Alimentos" class="proyecto-img" >
+<section id="proyectos" class="proyectos" data-aos="fade-up">
+  <div class="section-header">
+    <h2><span class="highlight">🎨</span> Nuestros Proyectos</h2>
+    <p class="section-subtitle">Descubre nuestro trabajo en acción</p>
+  </div>
+  
+  <div class="proyectos-grid">
+    <div class="proyecto-card" data-aos="zoom-in">
+      <div class="proyecto-img-container">
+        <img src="/img/Copatal.png" alt="Copatal - Congreso Patagónico de Alimentos" class="proyecto-img">
+        <div class="proyecto-overlay">
+          <a href="https://copatal.onrender.com/" target="_blank" class="view-btn">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="proyecto-info">
         <h3>Copatal</h3>
         <p>Landing page para el Congreso Patagónico de Alimentos</p>
-      </a>
+        <div class="tech-tags">
+          <span>React</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive</span>
+        </div>
+      </div>
     </div>
-  </section>
-  
-
-<section class="sobre-mi" data-aos="fade-up">
-  <h2>🙋 Sobre Mí</h2>
-  <p>Hola! Soy Valentín, tengo 18 años y estoy comenzando en el mundo de la programación. Me apasiona crear páginas web, aprender cosas nuevas y poco a poco ir creciendo en este mundo digital.</p>
-  <p>Este proyecto es un paso más en mi camino, y me encanta poder compartirlo con vos.</p>
+    
+    <div class="proyecto-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="proyecto-img-container">
+        <div class="coming-soon">Próximamente</div>
+      </div>
+      <div class="proyecto-info">
+        <h3>Nuevo Proyecto</h3>
+        <p>Estamos trabajando en algo increíble</p>
+        <div class="tech-tags">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<a href="https://wa.me/5492302354403" class="whatsapp-btn" target="_blank">💬 Contacto</a>
+<section id="sobre-mi" class="sobre-mi" data-aos="fade-up">
+  <div class="section-header">
+    <h2><span class="highlight">🙋</span> Sobre Mí</h2>
+    <p class="section-subtitle">Conoce al creador detrás de LoobStudio</p>
+  </div>
+  
+  <div class="about-container">
+    <div class="about-img" data-aos="fade-right">
+      <div class="img-border"></div>
+      <div class="img-border-2"></div>
+      <div class="profile-img"></div>
+    </div>
+    
+    <div class="about-content" data-aos="fade-left">
+      <h3>Hola, soy <span>Valentín</span></h3>
+      <p>Tengo 18 años y estoy transformando mi pasión por la tecnología en soluciones digitales impactantes. <br> En LoobStudio combinamos diseño atractivo con funcionalidad impecable para crear experiencias web memorables.</p>
+      
+      <div class="skills">
+        <div class="skill-item">
+          <div class="skill-icon react">
+            <i class="fab fa-react"></i>
+          </div>
+          <span>React</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon html">
+            <i class="fab fa-html5"></i>
+          </div>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon css">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon js">
+            <i class="fab fa-js"></i>
+          </div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon responsive">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <span>Responsive</span>
+        </div>
+      </div>
+      
+      <p>Creemos en la simplicidad, el diseño limpio y la tecnología bien implementada. Cada proyecto es una oportunidad para superarnos y ofrecer lo mejor a nuestros clientes.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="cta-content" data-aos="zoom-in">
+    <h3>¿Listo para llevar tu presencia digital al siguiente nivel?</h3>
+    <p>Contáctanos hoy mismo y comencemos a trabajar en tu proyecto.</p>
+    <a href="https://wa.me/5492302354403" class="cta-btn" target="_blank">💬 Hablar por WhatsApp</a>
+  </div>
+</div>
 
 <footer>
-  <p>© 2025 LoobStudio</p>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <a href="#" class="logo">Loob<span>Studio</span></a>
+      <p>Creando experiencias digitales excepcionales</p>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="https://wa.me/5492302354403" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +54 9 2302 354403</li>
+        <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 LoobStudio. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
+  // Inicializar AOS
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: false
+  });
+  
+  // Inicializar particles.js
   particlesJS.load('particles-js', 'particles.json', function() {
     console.log('particles.js loaded');
   });
-  AOS.init();
+  
+  // Efecto de escritura
+  var typed = new Typed('.typing', {
+    strings: ["sitios web", "experiencias", "soluciones digitales", "tu visión"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|',
+    autoInsertCss: true
+  });
+  
+  // Smooth scrolling para enlaces internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Efecto de scroll para navbar
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 </script>
 
 </body>
