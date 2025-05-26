@@ -560,6 +560,12 @@ section {
   color: #e44d26;
 }
 
+.skill-icon.MySQL {
+  background-color: rgba(228, 38, 218, 0.1);
+  color: #7e15bb;
+}
+
+
 .skill-icon.react {
   background-color: #1a2fa31f;
   color: #1a32b9;
