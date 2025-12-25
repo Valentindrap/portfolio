@@ -1,291 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LoobStudio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Valentin Drapanti - Ingeniero en Sistemas y Analista Programador">
+  <title>Valentin Drapanti | Portafolio</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/img/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-<div id="particles-js"></div>
-
-<header class="navbar">
-  <div class="container">
-    <a href="#" class="logo">Loob<span>Studio</span></a>
-    <nav>
-      <a href="#planes" class="nav-link">Planes</a>
-      <a href="#proyectos" class="nav-link">Proyectos</a>
-      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-    </nav>
-  </div>
-</header>
-
-<div class="intro">
-  <div class="intro-content">
-    <h1 class="logo animate__animated animate__fadeInDown">Transformamos tus ideas en <span class="typing"></span></h1>
-    <p class="slogan animate__animated animate__fadeIn animate__delay-1s">Bienvenido a la experiencia digital del futuro ✨</p>
-    <a href="#planes" class="cta-btn animate__animated animate__fadeInUp animate__delay-1s">Explora nuestros servicios</a>
-  </div>
-  <div class="scroll-down animate__animated animate__fadeIn animate__delay-2s">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-<section id="planes" class="planes" data-aos="fade-up">
-  <div class="section-header">
-    <h2><span class="highlight">🚀</span> Nuestros Planes</h2>
-    <p class="section-subtitle">Soluciones a medida para cada necesidad</p>
-  </div>
-  
-  <div class="plans-container">
-    <div class="plan" data-aos="flip-left" data-aos-delay="100">
-      <div class="plan-header">
-        <h3>Plan Landing Page</h3>
-        <div class="price">$100.000<span>/único</span></div>
+  <div class="app-container">
+    <!-- SIDEBAR / NAVIGATION -->
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <div class="logo">VD<span>.</span></div>
+        <span class="role">Dev & Engineer</span>
       </div>
-      <ul class="plan-features">
-        <li><i class="fas fa-check-circle"></i> Página de destino (1 página)</li>
-        <li><i class="fas fa-check-circle"></i> Formulario de contacto</li>
-        <li><i class="fas fa-check-circle"></i> Botones de redes o WhatsApp</li>
-        <li><i class="fas fa-check-circle"></i> Personalizado para tu negocio</li>
-        <li><i class="fas fa-check-circle"></i> 1 mes de mantenimiento incluido</li>
-      </ul>
-    </div>
-    
-    <div class="plan featured" data-aos="flip-left" data-aos-delay="300">
-      <div class="popular-badge">POPULAR</div>
-      <div class="plan-header">
-        <h3>Plan Web Completa</h3>
-        <div class="price">$200.000<span>/único</span></div>
-      </div>
-      <ul class="plan-features">
-        <li><i class="fas fa-check-circle"></i> Hasta 5 páginas</li>
-        <li><i class="fas fa-check-circle"></i> Formulario de contacto avanzado</li>
-        <li><i class="fas fa-check-circle"></i> Integración con redes sociales</li>
-        <li><i class="fas fa-check-circle"></i> Página "Acerca de nosotros"</li>
-        <li><i class="fas fa-check-circle"></i> 1 mes de mantenimiento incluido</li>
-      </ul>
-    </div>
-    
-    <div class="plan" data-aos="flip-left" data-aos-delay="500">
-      <div class="plan-header">
-        <h3>Plan eCommerce</h3>
-        <div class="price">$450.000<span>/único</span></div>
-      </div>
-      <ul class="plan-features">
-        <li><i class="fas fa-check-circle"></i> Tienda online totalmente funcional</li>
-        <li><i class="fas fa-check-circle"></i> Carrito de compras y pasarela de pago</li>
-        <li><i class="fas fa-check-circle"></i> Panel de administración de productos</li>
-        <li><i class="fas fa-check-circle"></i> Integración con redes sociales</li>
-        <li><i class="fas fa-check-circle"></i> Capacitación para gestionar tu tienda</li>
-        <li><i class="fas fa-check-circle"></i> 1 mes de mantenimiento incluido</li>
-      </ul>
-    </div>
 
-  </div>
-</section>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__link active-link" data-target="#home">
+              <i class="fa-solid fa-house"></i> <span>Inicio</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" data-target="#about">
+              <i class="fa-regular fa-user"></i> <span>Sobre Mí</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" data-target="#experience">
+              <i class="fa-solid fa-briefcase"></i> <span>Experiencia</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" data-target="#projects">
+              <i class="fa-solid fa-code"></i> <span>Proyectos</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" data-target="#contact">
+              <i class="fa-regular fa-paper-plane"></i> <span>Contacto</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
 
-<section id="proyectos" class="proyectos" data-aos="fade-up">
-  <div class="section-header">
-    <h2><span class="highlight">🎨</span> Nuestros Proyectos</h2>
-    <p class="section-subtitle">Descubre nuestro trabajo en acción</p>
-  </div>
-  
-  <div class="proyectos-grid">
-    <div class="proyecto-card" data-aos="zoom-in">
-      <div class="proyecto-img-container">
-        <img src="/img/Copatal.png" alt="Copatal - Congreso Patagónico de Alimentos" class="proyecto-img">
-        <div class="proyecto-overlay">
-          <a href="https://copatal.onrender.com/" target="_blank" class="view-btn">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
-        </div>
+      <div class="sidebar__footer">
+        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
       </div>
-      <div class="proyecto-info">
-        <h3>Copatal</h3>
-        <p>Landing page para el Congreso Patagónico de Alimentos</p>
-        <div class="tech-tags">
-          <span>React</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Responsive</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="proyecto-card" data-aos="zoom-in" data-aos-delay="200">
-      <div class="proyecto-img-container">
-        <div class="coming-soon">Próximamente</div>
-      </div>
-      <div class="proyecto-info">
-        <h3>Nuevo Proyecto</h3>
-        <p>Estamos trabajando en algo increíble</p>
-        <div class="tech-tags">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </aside>
 
-<section id="sobre-mi" class="sobre-mi" data-aos="fade-up">
-  <div class="section-header">
-    <h2><span class="highlight">🙋</span> Sobre Mí</h2>
-    <p class="section-subtitle">Conoce al creador detrás de LoobStudio</p>
-  </div>
-  
-  <div class="about-container">
-    <div class="about-img" data-aos="fade-right">
-      <div class="img-border"></div>
-      <div class="img-border-2"></div>
-      <div class="profile-img"></div>
-    </div>
-    
-    <div class="about-content" data-aos="fade-left">
-      <h3>Hola, soy <span>Valentín</span></h3>
-      <p>Tengo 18 años y estoy transformando mi pasión por la tecnología en soluciones digitales impactantes. <br> En LoobStudio combinamos diseño atractivo con funcionalidad impecable para crear experiencias web memorables.</p>
-      
-      <div class="skills">
-        <div class="skill-item">
-          <div class="skill-icon react">
-            <i class="fab fa-react"></i>
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      <div class="background-glow"></div>
+
+      <!-- HOME TAB -->
+      <section class="tab-content active-tab" id="home">
+        <div class="home__container">
+          <div class="home__data">
+            <span class="home__greeting">Hola, soy</span>
+            <h1 class="home__name">Valentin Drapanti</h1>
+            <h3 class="home__title">Estudiante de Ingeniería &<br>Analista Programador</h3>
+            <p class="home__description">
+              Busco transformar ideas complejas en soluciones digitales elegantes.
+              Apasionado por la inteligencia artificial, el desarrollo web y la innovación tecnológica.
+            </p>
+            <div class="home__btns">
+              <button class="button primary-btn"
+                onclick="document.querySelector('[data-target=\'#projects\']').click()">
+                Ver Proyectos
+              </button>
+              <button class="button secondary-btn"
+                onclick="document.querySelector('[data-target=\'#contact\']').click()">
+                Contactar
+              </button>
+            </div>
           </div>
-          <span>React</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon html">
-            <i class="fab fa-html5"></i>
+          <div class="home__img-wrapper">
+            <img src="img/Yo.jpeg" alt="Valentin Drapanti" class="home__img">
           </div>
-          <span>HTML5</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-icon MySQL">
-            <i class="fa-solid fa-database"></i>
-          </div>
-          <span>MySQL</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon css">
-            <i class="fab fa-css3-alt"></i>
-          </div>
-          <span>CSS3</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon js">
-            <i class="fab fa-js"></i>
-          </div>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon responsive">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <span>Responsive</span>
-        </div>
-      </div>
-      
-      <p>Creemos en la simplicidad, el diseño limpio y la tecnología bien implementada. Cada proyecto es una oportunidad para superarnos y ofrecer lo mejor a nuestros clientes.</p>
-    </div>
-  </div>
-</section>
+      </section>
 
-<div class="cta-section">
-  <div class="cta-content" data-aos="zoom-in">
-    <h3>¿Listo para llevar tu presencia digital al siguiente nivel?</h3>
-    <p>Contáctanos hoy mismo y comencemos a trabajar en tu proyecto.</p>
-    <a href="https://wa.me/5492302354403" class="cta-btn" target="_blank">💬 Hablar por WhatsApp</a>
-  </div>
-</div>
+      <!-- ABOUT TAB -->
+      <section class="tab-content" id="about">
+        <h2 class="section__title">Sobre Mí</h2>
+        <div class="tab-grid">
+          <div class="card education-card">
+            <h3 class="card__title"><i class="fa-solid fa-graduation-cap"></i> Formación Académica</h3>
+            <ul class="timeline">
+              <li class="timeline__item">
+                <span class="timeline__date">En curso</span>
+                <h4 class="timeline__title">Ingeniería en Sistemas</h4>
+                <p class="timeline__place">Facultad de Ingeniería de la Pampa</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">En curso</span>
+                <h4 class="timeline__title">Analista Programador</h4>
+                <p class="timeline__place">Facultad de Ingeniería de la Pampa</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">Completado</span>
+                <h4 class="timeline__title">Téc. en Informática Profesional y Personal</h4>
+                <p class="timeline__place">Título Secundario</p>
+              </li>
+            </ul>
+          </div>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-logo">
-      <a href="#" class="logo">Loob<span>Studio</span></a>
-      <p>Creando experiencias digitales excepcionales</p>
-    </div>
-    
-    <div class="footer-links">
-      <h4>Enlaces</h4>
-      <ul>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="https://wa.me/5492302354403" target="_blank">Contacto</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <ul>
-        <li><i class="fas fa-phone-alt"></i> +54 9 2302 354403</li>
-        <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="footer-bottom">
-    <p>© 2025 LoobStudio. Todos los derechos reservados.</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/loobstudio/"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/Valentindrap"><i class="fab fa-github"></i></a>
-    </div>
-  </div>
-</footer>
+          <div class="card skills-card">
+            <h3 class="card__title"><i class="fa-solid fa-microchip"></i> Habilidades</h3>
+            <div class="skills-wrapper">
+              <div class="skill-category">
+                <span>Frontend</span>
+                <div class="tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">React (Básico)</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span>Backend</span>
+                <div class="tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">Laravel (Básico)</span>
+                  <span class="tag">MySQL</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span>Otros</span>
+                <div class="tags">
+                  <span class="tag">OpenAI API</span>
+                  <span class="tag">Vizra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  // Inicializar AOS
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: false
-  });
-  
-  // Inicializar particles.js
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('particles.js loaded');
-  });
-  
-  // Efecto de escritura
-  var typed = new Typed('.typing', {
-    strings: ["sitios web", "experiencias", "soluciones digitales", "tu visión"],
-    typeSpeed: 50,
-    backSpeed: 30,
-    loop: true,
-    showCursor: true,
-    cursorChar: '|',
-    autoInsertCss: true
-  });
-  
-  // Smooth scrolling para enlaces internos
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-  
-  // Efecto de scroll para navbar
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-</script>
+      <!-- EXPERIENCE TAB -->
+      <section class="tab-content" id="experience">
+        <h2 class="section__title">Experiencia</h2>
+        <div class="center-card">
+          <div class="card experience-card">
+            <div class="exp-header">
+              <div class="exp-icon"><i class="fa-solid fa-code-branch"></i></div>
+              <div>
+                <h3 class="exp-role">Pasantía en Desarrollo</h3>
+                <span class="exp-company">Zpinat</span>
+              </div>
+              <span class="exp-date">Secundaria</span>
+            </div>
+            <div class="exp-body">
+              <p>
+                Colaboré en el desarrollo de software utilizando tecnologías modernas.
+                Participé en la implementación de lógicas de negocio usando <strong>Laravel</strong> e integración de
+                herramientas de <strong>Inteligencia Artificial</strong>.
+                Aprendí sobre flujos de trabajo profesionales y trabajo en equipo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- PROJECTS TAB -->
+      <section class="tab-content" id="projects">
+        <h2 class="section__title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
+              <div class="project-links">
+                <a href="https://copatal.onrender.com" target="_blank" title="Ver Demo"><i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Copatal</h3>
+            <p class="project-desc">
+              El <strong>Congreso Patagónico de Alimentos</strong> es un espacio de encuentro entre instituciones
+              académicas, científicas y la industria alimentaria.
+              La plataforma fomenta el desarrollo, la innovación y la colaboración en el sector.
+            </p>
+            <ul class="project-tech">
+              <li>Web App</li>
+              <li>Academia</li>
+              <li>Eventos</li>
+            </ul>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="folder-icon"><i class="fa-regular fa-folder-open"></i></div>
+              <!-- <div class="project-links">
+                                <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div> -->
+            </div>
+            <h3 class="project-title">IA Médico & Facturación</h3>
+            <p class="project-desc">
+              Sistema inteligente doble propósito. Asiste a doctores en el <strong>análisis de radiografías</strong>
+              mediante ChatGPT generando reportes en formato PDF y
+              automatiza la carga de <strong>facturas</strong> extrayendo datos y organizándolos en tablas SQL
+              automáticamente.
+            </p>
+            <ul class="project-tech">
+              <li>Laravel</li>
+              <li>Vizra</li>
+              <li>OpenAI</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT TAB -->
+      <section class="tab-content" id="contact">
+        <div class="contact-wrapper">
+          <h2 class="section__title">Contacto</h2>
+          <div class="card contact-card">
+            <p>¿Tienes una propuesta o quieres charlar?</p>
+            <a href="mailto:valentindrap03@gmail.com" class="email-link">
+              valentindrap03@gmail.com
+            </a>
+
+            <div class="social-links-big">
+              <a href="https://www.linkedin.com/in/valentin-andres-drapanti-schpetter-841939303/"
+                target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/valentindrap" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Main JS -->
+  <script src="js/script.js"></script>
 </body>
+
 </html>
