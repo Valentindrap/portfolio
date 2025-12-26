@@ -31,6 +31,7 @@ body {
     overflow: hidden;
     /* Prevent body scroll, content scrolls internally */
     height: 100vh;
+    height: 100dvh;
 }
 
 ul {
@@ -54,6 +55,7 @@ button {
     display: grid;
     grid-template-columns: 280px 1fr;
     height: 100vh;
+    height: 100dvh;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -151,6 +153,7 @@ button {
     padding: 3rem;
     overflow-y: auto;
     height: 100vh;
+    height: 100dvh;
 }
 
 /* TABS */
@@ -270,6 +273,7 @@ button {
 .home__btns {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .button {
@@ -302,7 +306,7 @@ button {
 /* ABOUT TAB */
 .tab-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -427,7 +431,7 @@ button {
 /* PROJECTS TAB */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
@@ -533,23 +537,44 @@ button {
 /* RESPONSIVE */
 /* Mobile & Tablet */
 @media screen and (max-width: 900px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+    }
+
     .app-container {
         grid-template-columns: 1fr;
         height: auto;
         display: block;
+        overflow: visible;
+    }
+
+    /* Background Glow */
+    .background-glow {
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        background: radial-gradient(circle, rgba(90, 80, 250, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
     }
 
     .sidebar {
         position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
         height: auto;
         flex-direction: row;
-        padding: 1rem;
+        padding: 0.75rem 1.5rem;
         z-index: 100;
-        border-top: 1px solid var(--border-color);
-        border-right: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        background: hsla(220, 32%, 10%, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
     .sidebar__header,
@@ -561,54 +586,72 @@ button {
         flex-direction: row;
         margin: 0;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
     }
 
     .nav__link {
         flex-direction: column;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
+        justify-content: center;
+        padding: 0.6rem;
+        border-radius: 50%;
         font-size: 0.75rem;
         background: transparent !important;
         box-shadow: none !important;
-        gap: 0.3rem;
+        gap: 0;
+        width: 3rem;
+        height: 3rem;
+        color: var(--text-secondary);
+        transition: 0.3s;
     }
 
     .nav__link span {
         display: none;
     }
 
-    /* Hide text on very small screens if needed, or keep short */
     .nav__link i {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
     }
 
     .nav__link.active-link {
-        color: var(--first-color);
+        color: #fff;
+        background-color: var(--first-color) !important;
+        box-shadow: 0 4px 15px rgba(80, 60, 250, 0.4) !important;
+        transform: translateY(-5px);
     }
 
+    /* Duplicate rules removed */
+
+
     .main-content {
-        padding: 2rem 1.5rem 6rem;
-        /* Space for bottom nav */
+        padding: 2rem 1.5rem 9rem;
+        /* Increased bottom padding even more for safety */
         height: auto;
         overflow: visible;
     }
 
     .home__container {
         height: auto;
-        padding-top: 3rem;
+        padding-top: 2rem;
         flex-direction: column-reverse;
-        /* Put image above text or text above image? Usually image above */
-        flex-direction: column;
+        /* Image will be 2nd child in HTML but `column-reverse` puts last child on TOP usually? 
+           Wait. HTML is: 1. Data, 2. ImgWrapper. 
+           column: 1 (top), 2 (bottom).
+           column-reverse: 2 (top), 1 (bottom).
+           YES, column-reverse puts Image (2nd) on Top. */
         text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
         justify-content: center;
     }
 
     .home__img-wrapper {
-        flex: 0 0 250px;
-        height: 250px;
+        flex: 0 0 180px;
+        height: 180px;
+        width: 180px;
         margin: 0 auto;
+        border-width: 3px;
+        box-shadow: 0 0 30px rgba(90, 80, 250, 0.3);
     }
 
     .home__data {
@@ -617,5 +660,43 @@ button {
 
     .home__name {
         font-size: 3rem;
+    }
+}
+
+/* Small Screens (< 400px) */
+@media screen and (max-width: 400px) {
+    .home__name {
+        font-size: 2.25rem;
+    }
+
+    .section__title {
+        font-size: 1.75rem;
+    }
+
+    .main-content {
+        padding: 1.5rem 1rem 6rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .home__name {
+        font-size: 2.25rem;
+    }
+
+    .home__img-wrapper {
+        flex: 0 0 160px;
+        height: 160px;
+        width: 160px;
+    }
+
+    .nav__link {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+
+    .nav__link i {
+        font-size: 1.1rem;
     }
 }
